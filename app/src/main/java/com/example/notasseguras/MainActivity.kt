@@ -78,6 +78,7 @@ fun SecureNotesScreen(viewModel: NotesViewModel = viewModel()) {
             value = tokenInput,
             onValueChange = { tokenInput = it },
             label = { Text("Ingrese Token") },
+            placeholder = { Text("Ej: abcd-1234") },
             modifier = Modifier.fillMaxWidth(),
             singleLine = true,
             keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done),
