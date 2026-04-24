@@ -5,11 +5,11 @@ plugins {
 
 android {
     namespace = "com.example.notasseguras"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.notasseguras"
-        minSdk = 23
+        minSdk = 26
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
