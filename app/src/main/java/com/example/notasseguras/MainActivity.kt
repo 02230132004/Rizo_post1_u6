@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Key
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -79,6 +80,7 @@ fun SecureNotesScreen(viewModel: NotesViewModel = viewModel()) {
             onValueChange = { tokenInput = it },
             label = { Text("Ingrese Token") },
             placeholder = { Text("Ej: abcd-1234") },
+            leadingIcon = { Icon(Icons.Default.Key, contentDescription = null) },
             modifier = Modifier.fillMaxWidth(),
             singleLine = true,
             keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done),
