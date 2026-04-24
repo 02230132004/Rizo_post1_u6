@@ -5,6 +5,8 @@ import android.widget.Toast
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -57,6 +59,13 @@ fun SecureNotesScreen(viewModel: NotesViewModel = viewModel()) {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
+        Icon(
+            imageVector = Icons.Default.Lock,
+            contentDescription = null,
+            modifier = Modifier.size(64.dp),
+            tint = MaterialTheme.colorScheme.primary
+        )
+
         Text(
             text = "Notas Seguras",
             style = MaterialTheme.typography.headlineMedium
@@ -66,7 +75,8 @@ fun SecureNotesScreen(viewModel: NotesViewModel = viewModel()) {
             value = tokenInput,
             onValueChange = { tokenInput = it },
             label = { Text("Ingrese Token") },
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier.fillMaxWidth(),
+            singleLine = true
         )
 
         Button(
@@ -76,7 +86,7 @@ fun SecureNotesScreen(viewModel: NotesViewModel = viewModel()) {
             Text("Guardar Token")
         }
 
-        Divider()
+        HorizontalDivider()
 
         Button(
             onClick = {
